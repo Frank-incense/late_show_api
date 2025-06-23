@@ -1,0 +1,191 @@
+{
+	"info": {
+		"_postman_id": "799eb7ba-3aa2-491a-8568-e247000580a7",
+		"name": "challenge-4-lateshow",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "45905411",
+		"_collection_link": "https://frankincenseokwemba.postman.co/workspace/Frankincense-Okwemba's-Workspac~09f51481-fceb-4528-84f9-600f4f2cf216/collection/45905411-799eb7ba-3aa2-491a-8568-e247000580a7?action=share&source=collection_link&creator=45905411"
+	},
+	"item": [
+		{
+			"name": "Episodes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/episodes",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"episodes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EpisodeBbyId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/episodes/1",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"episodes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Guests",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/guests",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"guests"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"password\",\n    \"password\": \"Fr@nk2024\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/register",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"password\",\n    \"password\": \"Fr@nk2024\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5555/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5555",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc1MDY3NTgzNCwianRpIjoiYzhiMDYzZTYtNDkyYi00NDUyLWIyZDktMzlhNDJmNTM3MzkxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6NiwibmJmIjoxNzUwNjc1ODM0LCJjc3JmIjoiZjExMjRlNzUtOTQ0Yi00YmFiLWIyOTktZDgwYzI2ZmZkYmEzIiwiZXhwIjoxNzUwNjc2NzM0fQ.Flz82kUaPQFrpdxf24LpUgZ5Gq-Vw0XsyO4ClsFmdn8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/episodes/19",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"episodes",
+						"19"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Appearance",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc1MDY3NTgzNCwianRpIjoiYzhiMDYzZTYtNDkyYi00NDUyLWIyZDktMzlhNDJmNTM3MzkxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6NiwibmJmIjoxNzUwNjc1ODM0LCJjc3JmIjoiZjExMjRlNzUtOTQ0Yi00YmFiLWIyOTktZDgwYzI2ZmZkYmEzIiwiZXhwIjoxNzUwNjc2NzM0fQ.Flz82kUaPQFrpdxf24LpUgZ5Gq-Vw0XsyO4ClsFmdn8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"rating\": 4,\n    \"guest_id\": 5,\n    \"episode_id\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/appearances",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"appearances"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "http://127.0.0.1:5555",
+			"type": "default"
+		}
+	]
+}

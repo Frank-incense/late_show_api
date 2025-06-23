@@ -1,4 +1,5 @@
 from server.config import db
+from sqlalchemy.orm import validates, relationship
 from sqlalchemy import Column, Integer, String
 from sqlalchemy_serializer import SerializerMixin
 
@@ -10,5 +11,9 @@ class Guest(db.Model, SerializerMixin):
     name = Column(String(), nullable=False)
     occupation = Column(String(), nullable=False)
 
+    appearances = relationship('Appearance', back_populates='guest')
+
+    serialize_rules = ('-appearances.guest',)
+    
     def __repr__(self):
         return f"<Guest: {self.id}, {self.name}>"

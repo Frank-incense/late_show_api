@@ -11,6 +11,10 @@ flask-jwt-extended = "*"
 psycopg2-binary = "*"
 flask-serialize = "*"
 sqlalchemy-serializer = "*"
+dotenv = "*"
+flask-restful = "*"
+flask-bcrypt = "*"
+faker = "*"
 
 [dev-packages]
 
