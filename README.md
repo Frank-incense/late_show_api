@@ -34,7 +34,7 @@ A Flask REST API for managing a Late Night TV Show's episodes, guests, and appea
 
 ### 1. Clone the Repository
 
-```bash
+```
 git clone https://github.com/<your-username>/late-show-api.git
 cd late-show-api
 ```
@@ -52,7 +52,7 @@ Set your database URI and env variables in .env:
 ```
 FLASK_APP=server/app.py
 FLASK_RUN_PORT=5555
-SQLALCHEMY_DATABASE_URI = "postgresql://<your-username>:<your-password>@localhost:5432/late_show_db"
+FLASK_SQLALCHEMY_DATABASE_URI = postgresql://<your-username>:<your-password>@localhost:5432/late_show_db
 FLASK_JWT_SECRET_KEY=super-secret
 <!-- Change the secret key -->
 ```
@@ -93,13 +93,17 @@ Authorization: Bearer <token>
 
 ## Routes
 Endpoint	Method	Auth Required	Description
-/register	POST	❌	Register a new user
-/login	POST	❌	Login and receive JWT token
-/episodes	GET	❌	List all episodes
-/episodes/<int:id>	GET	❌	Get specific episode + appearances
-/episodes/<int:id>	DELETE	✅	Delete episode + related appearances
-/guests	GET	❌	List all guests
-/appearances	POST	✅	Create new appearance
+
+| Route                    | Method | Auth Required  | Description                          |
+|--------------------------|--------|----------------|--------------------------------------|
+| `/register`              | POST   | ❌             | Register a new user                  |
+| `/login`                 | POST   | ❌             | Log in and receive JWT token         |
+| `/episodes`              | GET    | ❌             | List all episodes                    |
+| `/episodes/<int:id>`     | GET    | ❌             | Get specific episode and appearances |
+| `/episodes/<int:id>`     | DELETE | ✅             | Delete episode (and appearances)     |
+| `/guests`                | GET    | ❌             | List all guests                      |
+| `/appearances`           | POST   | ✅             | Create a new appearance              |
+
 
 ## Postman Testing
 Steps:
